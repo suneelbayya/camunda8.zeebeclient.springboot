@@ -19,6 +19,13 @@ public class CustomerService {
         customerDataRepository.save(customerData);
     }
 
+    public void updateRecord(Long processInstanceId, String state)
+    {
+        CustomerData customerData = customerDataRepository.findById(processInstanceId).orElseThrow();
+        customerData.setState(state);
+        customerDataRepository.save(customerData);
+    }
+
     public List<CustomerData> fetchAllCustomers()
     {
          return customerDataRepository.findAll();

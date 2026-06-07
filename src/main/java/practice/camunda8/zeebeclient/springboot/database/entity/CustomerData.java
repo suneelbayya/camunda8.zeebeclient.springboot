@@ -28,4 +28,9 @@ public class CustomerData {
         this.lastName = lastName;
         this.zipCode = zipCode;
     }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
 }
